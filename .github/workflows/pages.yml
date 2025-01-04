@@ -4,7 +4,9 @@ on:
   push:
     branches:
       - main # default branch
-
+  pull_request:
+    branches:
+      - main
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -32,10 +34,12 @@ jobs:
       - name: Build
         run: npm run build
       - name: Upload Pages artifact
+        if: github.event_name == 'push'
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
   deploy:
+    if: github.event_name == 'push'
     needs: build
     permissions:
       pages: write
