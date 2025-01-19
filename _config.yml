@@ -67,3 +67,5 @@ ignore: null
 theme: icarus
 deploy:
   type: ''
+
+share: false
