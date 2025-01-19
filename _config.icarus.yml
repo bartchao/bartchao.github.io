@@ -203,6 +203,9 @@ widgets:
             Github:
                 icon: fab fa-github
                 url: https://github.com/bartchao
+            Email:
+                icon: fas fa-envelope
+                url: mailto:fredchao0618@hotmail.com.tw
     # Table of contents widget configurations
     -
         # Where should the widget be placed, left sidebar or right sidebar
